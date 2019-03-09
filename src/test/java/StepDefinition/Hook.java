@@ -18,9 +18,9 @@ public class Hook {
 
 	@After
 	public static void quit() {
-	/*	driver.close();
-		driver.quit();
-		System.out.println("After Method");*/
+		driver.close();
+		//driver.quit();
+		System.out.println("After Method");
 	}
 
 }

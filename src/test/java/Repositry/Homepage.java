@@ -2,8 +2,15 @@ package Repositry;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import StepDefinition.Hook;
 
 public class Homepage {
+	
+	public Homepage() {
+		PageFactory.initElements(Hook.driver, this);
+		}
 
 	@FindBy(name="quantity")
 	private WebElement Select_quantty;

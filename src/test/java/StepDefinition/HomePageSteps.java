@@ -13,13 +13,6 @@ public class HomePageSteps {
 	 Hook.driver.get("http://demo.guru99.com/payment-gateway/index.php");
 	}
 
-/*	@When("The user should select the quantity")
-	public void the_user_should_select_the_quantity() {
-	   
-	   c.selectItem("2");
-   
-	}
-*/
 	@When("the user should click buy now button")
 	public void the_user_should_click_buy_now_button() {
 		Homepage h=new Homepage();

@@ -2,8 +2,15 @@ package Repositry;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import StepDefinition.Hook;
 
 public class PaymentProcessPage {
+	
+	public PaymentProcessPage() {
+	PageFactory.initElements(Hook.driver, this);
+	}
 	@FindBy(id="card_nmuber")
 	private WebElement Card_Nmuber;
 

@@ -7,10 +7,11 @@ import Repositry.Homepage;
 import Repositry.PaymentProcessPage;
 
 public class Common {
-	String expdate = null;
-	String expyear = null;
-	String cvv = null;
-	String data = null;
+static	String expdate = null;
+static	String expyear = null;
+static	String cvv = null;
+static	String data = null;
+static String expda = null;
 	
 
 	public void selectItem(String data) {
@@ -58,12 +59,40 @@ element.click();
 			/*System.out.println(split2[i]);*/	
 		}
 		System.out.println(expdate);
+		String[] splitdate = expdate.split("/");
+		for (int i = 0; i <splitdate.length; i++) {
+			 expda = splitdate[i];	
+			break;
+		}
+		System.out.println(expda);
+		for (int i = 1; i <splitdate.length; i++) {
+			expyear = split2[i];
+				
+		}
+		
+		System.out.println(expyear);
 			}
+	
+	
 	public void cardDetails() {
 		PaymentProcessPage pg= new PaymentProcessPage();
-		pg.getCard_Nmuber().sendKeys("");
+		pg.getCard_Nmuber().sendKeys(data);
 		pg.getCVV().sendKeys(cvv);
-		pg.getExpiry().sendKeys("06");
-		pg.getExpiry().sendKeys("2026");
+		pg.getExpiry().sendKeys(expda);
+		pg.getExpiry().sendKeys(expyear);
 	}
+/*public void selectMonth(String expda) {
+	PaymentProcessPage pg= new PaymentProcessPage();
+	WebElement eleme = Hook.driver.findElement(By.id("month"));
+	Select s = new Select(eleme);
+	s.selectByValue(expda);
+}
+
+public void selectyear(String expyear) {
+	PaymentProcessPage pg= new PaymentProcessPage();
+	WebElement eleme = Hook.driver.findElement(By.id("year"));
+	Select s = new Select(eleme);
+	s.selectByValue(expyear);
+}
+*/
 }

@@ -30,8 +30,7 @@ formatter.match({
   "location": "HomePageSteps.the_user_should_click_buy_now_button()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat StepDefinition.Common.click(Common.java:24)\r\n\tat StepDefinition.HomePageSteps.the_user_should_click_buy_now_button(HomePageSteps.java:27)\r\n\tat ✽.the user should click buy now button(C:/Users/Admin/oxygen/eclipse-workspace/Guru99Site/src/test/resources/Feature/HomePage.Feature:6)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "the user shoudl navigate to payment process",
@@ -41,7 +40,89 @@ formatter.match({
   "location": "HomePageSteps.the_user_shoudl_navigate_to_payment_process()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "card generate senario",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "The user should click on card generate and should navigate to that page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "CardNumberSteps.the_user_should_click_on_card_generate_and_should_navigate_to_that_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "The user should read the card detail content",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "CardNumberSteps.the_user_should_read_the_card_detail_content()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "save the card details",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CardNumberSteps.save_the_card_details()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "payment process",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "The user should be in payment processing page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "PaymentProcessSteps.the_user_should_be_in_payment_processing_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "The user should wite the card detail",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "PaymentProcessSteps.the_user_should_wite_the_card_detail()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click on pay option",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "PaymentProcessSteps.click_on_pay_option()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

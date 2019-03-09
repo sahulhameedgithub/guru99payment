@@ -2,9 +2,16 @@ package Repositry;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import StepDefinition.Hook;
 
 public class CardNumber {
 
+	public CardNumber() {
+	PageFactory.initElements(Hook.driver, this);
+	}
+	
 	@FindBy(xpath ="(//a[text()= 'Generate Card Number'])[1]")
 	private WebElement Generate_card;
 	
